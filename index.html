@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | VR4More-Goethehaus-Combined</title>
     <meta name="description" content="">
@@ -10,7 +11,7 @@
   </head>
   <body>
     <div id="unity-container">
-      <div id="unity-canvas-container">
+      <div id="unity-canvas-container" style="width: 100%; height: 100%;">
         <canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
       </div>
       <div id="unity-loading-bar">
@@ -29,13 +30,13 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/test-mars-xr.loader.js";
+      var loaderUrl = buildUrl + "/NexusWebXR.loader.js";
       var config = {
-        dataUrl: buildUrl + "/test-mars-xr.data.gz",
-        frameworkUrl: buildUrl + "/test-mars-xr.framework.js.gz",
-        codeUrl: buildUrl + "/test-mars-xr.wasm.gz",
+        dataUrl: buildUrl + "/NexusWebXR.data",
+        frameworkUrl: buildUrl + "/NexusWebXR.framework.js",
+        codeUrl: buildUrl + "/NexusWebXR.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Consensive GmbH",
+        companyName: "TestLucky",
         productName: "VR4More-Goethehaus-Combined",
         productVersion: "0.1",
       };
@@ -49,8 +50,6 @@
       var unityInstance = null;
       
 
-      canvasContainer.style.width = "960px";
-      canvasContainer.style.height = "600px";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
